@@ -598,7 +598,8 @@ typedef struct JPC_CollisionEstimationResult {
 	JPC_Vec3 Tangent2;						///< Second normalized tangent of contact normal (forms a basis with mTangent1 and mWorldSpaceNormal)
 
 	uint NumImpulses;
-	JPC_Impulse Impulses[JPC_ContactPointsCapacity];
+//	JPC_Impulse Impulses[JPC_ContactPointsCapacity];
+	JPC_Impulse Impulses[64];
 } JPC_CollisionEstimationResult;
 
 ENSURE_SIZE_ALIGN(JPC_CollisionEstimationResult, JPH::CollisionEstimationResult)
